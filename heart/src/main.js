@@ -1,6 +1,4 @@
-// Import the necessary modules
-import * as Three from 'three';
-import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js';
+
 
 
 // Set up the scene, camera, and renderer
