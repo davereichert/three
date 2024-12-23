@@ -3,13 +3,13 @@
 
 // Set up the scene, camera, and renderer
 const scene = new THREE.Scene();
-const camera = new Three.PerspectiveCamera(
+const camera = new THREE.PerspectiveCamera(
   75,
   window.innerWidth / window.innerHeight,
   0.1,
   1000
 );
-const renderer = new Three.WebGLRenderer({
+const renderer = new THREE.WebGLRenderer({
   canvas: document.querySelector('#bg'),
 });
 
@@ -19,13 +19,13 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 camera.position.setZ(30);
 
 // Add a directional light
-const directionalLight = new Three.DirectionalLight(0xffffff, 1);
+const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
 directionalLight.position.set(0, 0, 10);
 directionalLight.castShadow = true;
 scene.add(directionalLight);
 
 // Example: add a soft ambient light
-const ambientLight = new Three.AmbientLight(0xffffff, 0.3);
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.3);
 scene.add(ambientLight);
 
 
@@ -43,7 +43,7 @@ objLoader.load('./heart.obj', (obj) => {
   obj.traverse((child) => {
     if (child.isMesh) {
       // Assign a red MeshStandardMaterial
-      child.material = new Three.MeshStandardMaterial({ color: 0xff0000 });
+      child.material = new THREE.MeshStandardMaterial({ color: 0xff0000 });
     }
   });
 
@@ -79,6 +79,6 @@ function animate() {
   renderer.render(scene, camera);
 }
 
-const bg = new Three.TextureLoader().load('./bg.jpg');
+const bg = new THREE.TextureLoader().load('./bg.jpg');
 scene.background = bg;
 
