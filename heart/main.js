@@ -38,7 +38,7 @@ let heartObj;
 
 // Load the heart object
 const objLoader = new OBJLoader();
-objLoader.load('../heart.obj', (obj) => {
+objLoader.load('./heart.obj', (obj) => {
   // Traverse all children of the loaded OBJ
   obj.traverse((child) => {
     if (child.isMesh) {
