@@ -2,7 +2,7 @@
 
 
 // Set up the scene, camera, and renderer
-const scene = new Three.Scene();
+const scene = new THREE.Scene();
 const camera = new Three.PerspectiveCamera(
   75,
   window.innerWidth / window.innerHeight,
@@ -31,7 +31,7 @@ scene.add(ambientLight);
 
 
 // Clock to track elapsed time (for the pulsation)
-const clock = new Three.Clock();
+const clock = new THREE.Clock();
 
 // Global reference to the heart object
 let heartObj;
